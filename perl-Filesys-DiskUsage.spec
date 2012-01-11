@@ -9,13 +9,13 @@
 Summary:	Filesys::DiskUsage - Estimate file space usage (similar to `du`)
 #Summary(pl.UTF-8):	
 Name:		perl-Filesys-DiskUsage
-Version:	0.04
+Version:	0.05
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filesys/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	42c9441386f5da2214cd7186c8adaea5
+# Source0-md5:	da2f1fc56d09f75145d5b9332bc33128
 URL:		http://search.cpan.org/dist/Filesys-DiskUsage/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
