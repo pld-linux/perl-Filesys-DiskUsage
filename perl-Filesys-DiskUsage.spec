@@ -8,17 +8,19 @@
 Summary:	Filesys::DiskUsage - Estimate file space usage (similar to `du`)
 #Summary(pl.UTF-8):	
 Name:		perl-Filesys-DiskUsage
-Version:	0.05
+Version:	0.13
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Filesys/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	da2f1fc56d09f75145d5b9332bc33128
-URL:		http://search.cpan.org/dist/Filesys-DiskUsage/
+Source0:	https://www.cpan.org/authors/id/M/MA/MANWAR/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	8eb2e83236fb039503c6f444fed4c4c2
+URL:		https://metacpan.org/release/Filesys-DiskUsage
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
+BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-Test-Warn
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -51,5 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%attr(755,root,root) %{_bindir}/fdu
 %{perl_vendorlib}/Filesys/*.pm
+%{_mandir}/man1/fdu.1p*
 %{_mandir}/man3/*
